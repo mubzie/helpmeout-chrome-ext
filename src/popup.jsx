@@ -1,6 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
-import { ReactDOM } from "react-dom/client";
+import { useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./popup.css";
 import logoImage from "/public/vector.png";
@@ -12,6 +11,12 @@ import copyImage from "/public/copy.png";
 import monitorImage from "/public/monitor.png";
 
 function Popup() {
+  const [isToggled, setIsToggled] = useState(false);
+
+  const onToggled = () => {
+    setIsToggled(!isToggled);
+  };
+
   return (
     <div className="container">
       <div className="header-container">
@@ -46,6 +51,31 @@ function Popup() {
             <img src={copyImage} className="c-tap-icon"></img>
             <span className="c-tap-title">Current tap</span>
           </div>
+        </div>
+
+        <div className="selectionContainer">
+          <div className="videoContainer">
+            <div className="video">
+              <img src={videoImage} className="video-icon"></img>
+              <span className="video-title">Camera</span>
+            </div>
+
+            <div className="radioBtn">
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={isToggled}
+                  onChange={onToggled}
+                />
+                <span className="slider rounded" />
+              </label>
+            </div>
+          </div>
+
+          {/* <div className="audio">
+            <img src={audioImage} className="audio-icon"></img>
+            <span className="audio-title">Audio</span>
+          </div> */}
         </div>
       </div>
     </div>
