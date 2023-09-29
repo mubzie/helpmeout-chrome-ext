@@ -11,10 +11,15 @@ import copyImage from "/public/copy.png";
 import monitorImage from "/public/monitor.png";
 
 function Popup() {
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggledVideo, setIsToggledVideo] = useState(false);
+  const [isToggledAudio, setIsToggledAudio] = useState(false);
 
-  const onToggled = () => {
-    setIsToggled(!isToggled);
+  const onToggledVideo = () => {
+    setIsToggledVideo(!isToggledVideo);
+  };
+
+  const onToggledAudio = () => {
+    setIsToggledAudio(!isToggledAudio);
   };
 
   return (
@@ -54,8 +59,8 @@ function Popup() {
         </div>
 
         <div className="selectionContainer">
-          <div className="videoContainer">
-            <div className="video">
+          <div className="mediaContainer">
+            <div className="media">
               <img src={videoImage} className="video-icon"></img>
               <span className="video-title">Camera</span>
             </div>
@@ -64,18 +69,35 @@ function Popup() {
               <label className="switch">
                 <input
                   type="checkbox"
-                  checked={isToggled}
-                  onChange={onToggled}
+                  checked={isToggledVideo}
+                  onChange={onToggledVideo}
                 />
                 <span className="slider rounded" />
               </label>
             </div>
           </div>
 
-          {/* <div className="audio">
-            <img src={audioImage} className="audio-icon"></img>
-            <span className="audio-title">Audio</span>
-          </div> */}
+          <div className="mediaContainer">
+            <div className="media">
+              <img src={audioImage} className="video-icon"></img>
+              <span className="video-title">Audio</span>
+            </div>
+
+            <div className="radioBtn">
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={isToggledAudio}
+                  onChange={onToggledAudio}
+                />
+                <span className="slider rounded" />
+              </label>
+            </div>
+          </div>
+
+          <div className="containerBtn">
+            <button type="button"> Start Recording</button>
+          </div>
         </div>
       </div>
     </div>

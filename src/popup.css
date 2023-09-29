@@ -1,7 +1,7 @@
 #react-target {
   position: relative;
   width: 250px;
-  height: 300px;
+  height: 430px;
   padding: 8px;
   overflow: hidden;
 }
@@ -98,6 +98,9 @@ p.para {
 
 .selectionContainer {
   margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .video {
@@ -115,7 +118,7 @@ p.para {
   height: 24px;
 }
 
-.audio {
+.media {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,12 +128,12 @@ p.para {
   font-weight: 500;
 }
 
-.audio img {
+.media img {
   width: 24px;
   height: 24px;
 }
 
-.videoContainer {
+.mediaContainer {
   display: flex;
   justify-content: space-between;
 
@@ -192,4 +195,20 @@ input:checked + .slider:before {
 
 .slider.rounded:before {
   border-radius: 50%;
+}
+/* slide styling ends here */
+
+button {
+  width: 100%;
+  padding: 16px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  background-color: #120b48;
+  color: #fff;
+
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
 }
