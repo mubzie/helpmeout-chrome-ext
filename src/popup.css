@@ -1,0 +1,100 @@
+#react-target {
+  width: 250px;
+  height: 300px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.logoContainer img {
+  width: 28px;
+  height: 28px;
+}
+
+span.title {
+  color: #120b48;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.settingContainer img {
+  width: 20px;
+  height: 20px;
+}
+
+.closeContainer img {
+  width: 20px;
+  height: 20px;
+  fill: #413c6d;
+}
+
+.closeBtn {
+  filter: invert(1) brightness(50%) saturate(50%);
+}
+
+.parentContainer {
+  margin-top: 32px;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.f-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.c-tap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.f-screen img {
+  width: 32px;
+  height: 32px;
+}
+
+.c-tap img {
+  width: 32px;
+  height: 32px;
+}
+
+h1 {
+  color: blue;
+}
+
+p.para {
+  font-size: 14px;
+  color: #413c6d;
+  margin-block-end: 0;
+}
